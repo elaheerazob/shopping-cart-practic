@@ -11,6 +11,30 @@ function updateProductNumber(product,price,numberUp){
     //Update total fild
     const caseTotal = document.getElementById(product +'-total');
     caseTotal.innerText =caseNumber * price;
+
+    calculetTotal()
+}
+
+function getInputValue(product){
+    const prductInput =document.getElementById(product +'-number');
+    const productNumber = parseInt(prductInput.value);
+    return productNumber;
+}
+
+function calculetTotal(){
+    
+    const phoneTotal = getInputValue('phone') * 1219;
+    const caseTotal = getInputValue('case') * 59;
+    const subTotal = phoneTotal + caseTotal;
+    const tax = subTotal /4;
+    const total = subTotal + tax;
+
+    
+    //update
+    document.getElementById('sub-total').innerText = subTotal;
+    document.getElementById('tax-total').innerText = tax;
+    document.getElementById('total-amount').innerText =total;
+    
 }
 
 //case 
