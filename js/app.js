@@ -53,3 +53,16 @@ document.getElementById('phone-minus').addEventListener('click',function(){
     updateProductNumber('phone',1219,false)
 })
 
+//remove
+
+function remove(card){
+    const card1 =document.getElementById(card);
+    card1.style.display ='none';
+}
+document.getElementById('remove1').addEventListener('click',function(){
+        remove('card-1')
+})
+document.getElementById('remove2').addEventListener('click',function(){
+        remove('card-2')
+})
+
